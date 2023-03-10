@@ -4,22 +4,23 @@
 <br>
 <div class="container">
     <br>
+    <center>
             <form action="/kalkulator" method="POST">
                 @csrf
-                <div class="card">
+                <div class="card bg-primary mb-3" style="width: 18rem">
                     <div class="card-header">
-                     <h5>Kalkulator</h5>
+                    <h5 class="text-white">KALKULATOR</h5>
                     </div>
                     <div class="card-body">
-                        <div class="col-md-3">
-                            <input type="number" name="first" class="form-control">
+                        <div>
+                            <input type="number" name="first" class="form-control" placeholder="Pilih Angka">
                         </div>
                         <br>
-                        <div class="col-md-3">
-                            <input type="number" name="second" class="form-control">
+                        <div>
+                            <input type="number" name="second" class="form-control" placeholder="Pilih Angka">
                         </div>
                         <br>
-                        <div class="col-md-3">
+                        <div>
                             <select name="operasi" class="form-control">
                                 <option selected>Operasi</option>
                                 <option value="tambah"> Tambah (+) </option>
@@ -29,13 +30,15 @@
                             </select>
                         </div>
                         <br>
-                        <div class="col-md-3">
-                            <button type="submit" class="btn btn-info">Cari Hasil</button>
+                        <div>
+                            <button type="submit" class="btn btn-danger" style="width: 16rem">Cari Hasil</button>
                         </div>
                         <br>
                         @if (isset($hasil))
-                        <div>
+                        <div class="card">
+                            <div class="card-body">
                             Hasilnya <b>{{$hasil}}</b>
+                            </div>
                         </div>
                         @endif
                     </div>
@@ -43,5 +46,6 @@
             </div>
             </form>
         </div>
+    </center>
 </div>
 @endsection

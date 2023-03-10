@@ -33,7 +33,7 @@ class KalkulatorController extends Controller
             $hasil = $first * $second;
             return view('welcome', compact('hasil'));
         } else {
-            return 'tidak ada';
+            return 'Tidak ada hasil, Anda belum mengisi kolom nomor';
         }
 
     }
